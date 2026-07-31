@@ -1,0 +1,416 @@
+{
+  "woodpecker_drum": {
+    "files": [
+      "forest-woodpecker_drum-v01.mp3",
+      "forest-woodpecker_drum-v02.mp3",
+      "forest-woodpecker_drum-v03.mp3",
+      "forest-woodpecker_drum-v04.mp3"
+    ],
+    "duration_s": 4
+  },
+  "woodpecker_call": {
+    "files": [
+      "forest-woodpecker_call-v01.mp3",
+      "forest-woodpecker_call-v02.mp3",
+      "forest-woodpecker_call-v03.mp3",
+      "forest-woodpecker_call-v04.mp3"
+    ],
+    "duration_s": 4
+  },
+  "owl_hoot": {
+    "files": [
+      "forest-owl_hoot-v01.mp3",
+      "forest-owl_hoot-v02.mp3",
+      "forest-owl_hoot-v03.mp3",
+      "forest-owl_hoot-v04.mp3"
+    ],
+    "duration_s": 6
+  },
+  "owl_flight": {
+    "files": [
+      "forest-owl_flight-v01.mp3",
+      "forest-owl_flight-v02.mp3",
+      "forest-owl_flight-v03.mp3",
+      "forest-owl_flight-v04.mp3"
+    ],
+    "duration_s": 5
+  },
+  "deer_browse": {
+    "files": [
+      "forest-deer_browse-v01.mp3",
+      "forest-deer_browse-v02.mp3",
+      "forest-deer_browse-v03.mp3",
+      "forest-deer_browse-v04.mp3"
+    ],
+    "duration_s": 6
+  },
+  "deer_alarm": {
+    "files": [
+      "forest-deer_alarm-v01.mp3",
+      "forest-deer_alarm-v02.mp3",
+      "forest-deer_alarm-v03.mp3",
+      "forest-deer_alarm-v04.mp3"
+    ],
+    "duration_s": 4
+  },
+  "crow_deliberate": {
+    "files": [
+      "forest-crow_deliberate-v01.mp3",
+      "forest-crow_deliberate-v02.mp3",
+      "forest-crow_deliberate-v03.mp3",
+      "forest-crow_deliberate-v04.mp3"
+    ],
+    "duration_s": 5
+  },
+  "crow_mob": {
+    "files": [
+      "forest-crow_mob-v01.mp3",
+      "forest-crow_mob-v02.mp3",
+      "forest-crow_mob-v03.mp3",
+      "forest-crow_mob-v04.mp3"
+    ],
+    "duration_s": 6
+  },
+  "jay_scream": {
+    "files": [
+      "forest-jay_scream-v01.mp3",
+      "forest-jay_scream-v02.mp3",
+      "forest-jay_scream-v03.mp3",
+      "forest-jay_scream-v04.mp3"
+    ],
+    "duration_s": 3
+  },
+  "jay_acorn": {
+    "files": [
+      "forest-jay_acorn-v01.mp3",
+      "forest-jay_acorn-v02.mp3",
+      "forest-jay_acorn-v03.mp3",
+      "forest-jay_acorn-v04.mp3"
+    ],
+    "duration_s": 5
+  },
+  "squirrel_alarm": {
+    "files": [
+      "forest-squirrel_alarm-v01.mp3",
+      "forest-squirrel_alarm-v02.mp3",
+      "forest-squirrel_alarm-v03.mp3",
+      "forest-squirrel_alarm-v04.mp3"
+    ],
+    "duration_s": 4
+  },
+  "squirrel_cache": {
+    "files": [
+      "forest-squirrel_cache-v01.mp3",
+      "forest-squirrel_cache-v02.mp3",
+      "forest-squirrel_cache-v03.mp3",
+      "forest-squirrel_cache-v04.mp3"
+    ],
+    "duration_s": 5
+  },
+  "wind_canopy": {
+    "files": [
+      "forest-wind_canopy-v01.mp3",
+      "forest-wind_canopy-v02.mp3",
+      "forest-wind_canopy-v03.mp3",
+      "forest-wind_canopy-v04.mp3"
+    ],
+    "duration_s": 8
+  },
+  "wind_storm": {
+    "files": [
+      "forest-wind_storm-v01.mp3",
+      "forest-wind_storm-v02.mp3",
+      "forest-wind_storm-v03.mp3",
+      "forest-wind_storm-v04.mp3"
+    ],
+    "duration_s": 8
+  },
+  "leaves_footstep": {
+    "files": [
+      "forest-leaves_footstep-v01.mp3",
+      "forest-leaves_footstep-v02.mp3",
+      "forest-leaves_footstep-v03.mp3",
+      "forest-leaves_footstep-v04.mp3"
+    ],
+    "duration_s": 5
+  },
+  "leaves_gust": {
+    "files": [
+      "forest-leaves_gust-v01.mp3",
+      "forest-leaves_gust-v02.mp3",
+      "forest-leaves_gust-v03.mp3",
+      "forest-leaves_gust-v04.mp3"
+    ],
+    "duration_s": 5
+  },
+  "stream_steady": {
+    "files": [
+      "forest-stream_steady-v01.mp3",
+      "forest-stream_steady-v02.mp3",
+      "forest-stream_steady-v03.mp3",
+      "forest-stream_steady-v04.mp3"
+    ],
+    "duration_s": 9
+  },
+  "stream_full": {
+    "files": [
+      "forest-stream_full-v01.mp3",
+      "forest-stream_full-v02.mp3",
+      "forest-stream_full-v03.mp3",
+      "forest-stream_full-v04.mp3"
+    ],
+    "duration_s": 8
+  },
+  "fox_trot": {
+    "files": [
+      "forest-fox_trot-v01.mp3",
+      "forest-fox_trot-v02.mp3",
+      "forest-fox_trot-v03.mp3",
+      "forest-fox_trot-v04.mp3"
+    ],
+    "duration_s": 5
+  },
+  "fox_bark": {
+    "files": [
+      "forest-fox_bark-v01.mp3",
+      "forest-fox_bark-v02.mp3",
+      "forest-fox_bark-v03.mp3",
+      "forest-fox_bark-v04.mp3"
+    ],
+    "duration_s": 5
+  },
+  "insects_warm": {
+    "files": [
+      "forest-insects_warm-v01.mp3",
+      "forest-insects_warm-v02.mp3",
+      "forest-insects_warm-v03.mp3",
+      "forest-insects_warm-v04.mp3"
+    ],
+    "duration_s": 8
+  },
+  "insects_morning": {
+    "files": [
+      "forest-insects_morning-v01.mp3",
+      "forest-insects_morning-v02.mp3",
+      "forest-insects_morning-v03.mp3",
+      "forest-insects_morning-v04.mp3"
+    ],
+    "duration_s": 7
+  },
+  "rain_canopy": {
+    "files": [
+      "forest-rain_canopy-v01.mp3",
+      "forest-rain_canopy-v02.mp3",
+      "forest-rain_canopy-v03.mp3",
+      "forest-rain_canopy-v04.mp3"
+    ],
+    "duration_s": 8
+  },
+  "rain_drip": {
+    "files": [
+      "forest-rain_drip-v01.mp3",
+      "forest-rain_drip-v02.mp3",
+      "forest-rain_drip-v03.mp3",
+      "forest-rain_drip-v04.mp3"
+    ],
+    "duration_s": 8
+  },
+  "branch_crack": {
+    "files": [
+      "forest-branch_crack-v01.mp3",
+      "forest-branch_crack-v02.mp3",
+      "forest-branch_crack-v03.mp3",
+      "forest-branch_crack-v04.mp3"
+    ],
+    "duration_s": 3
+  },
+  "branch_fall": {
+    "files": [
+      "forest-branch_fall-v01.mp3",
+      "forest-branch_fall-v02.mp3",
+      "forest-branch_fall-v03.mp3",
+      "forest-branch_fall-v04.mp3"
+    ],
+    "duration_s": 4
+  },
+  "dawn_chorus_build": {
+    "files": [
+      "forest-dawn_chorus_build-v01.mp3",
+      "forest-dawn_chorus_build-v02.mp3",
+      "forest-dawn_chorus_build-v03.mp3",
+      "forest-dawn_chorus_build-v04.mp3"
+    ],
+    "duration_s": 9
+  },
+  "dawn_chorus_peak": {
+    "files": [
+      "forest-dawn_chorus_peak-v01.mp3",
+      "forest-dawn_chorus_peak-v02.mp3",
+      "forest-dawn_chorus_peak-v03.mp3",
+      "forest-dawn_chorus_peak-v04.mp3"
+    ],
+    "duration_s": 9
+  },
+  "blackbird_song": {
+    "files": [
+      "forest-blackbird_song-v01.mp3",
+      "forest-blackbird_song-v02.mp3",
+      "forest-blackbird_song-v03.mp3",
+      "forest-blackbird_song-v04.mp3"
+    ],
+    "duration_s": 8
+  },
+  "blackbird_alarm": {
+    "files": [
+      "forest-blackbird_alarm-v01.mp3",
+      "forest-blackbird_alarm-v02.mp3",
+      "forest-blackbird_alarm-v03.mp3",
+      "forest-blackbird_alarm-v04.mp3"
+    ],
+    "duration_s": 4
+  },
+  "tit_wave": {
+    "files": [
+      "forest-tit_wave-v01.mp3",
+      "forest-tit_wave-v02.mp3",
+      "forest-tit_wave-v03.mp3",
+      "forest-tit_wave-v04.mp3"
+    ],
+    "duration_s": 7
+  },
+  "tit_feeding": {
+    "files": [
+      "forest-tit_feeding-v01.mp3",
+      "forest-tit_feeding-v02.mp3",
+      "forest-tit_feeding-v03.mp3",
+      "forest-tit_feeding-v04.mp3"
+    ],
+    "duration_s": 6
+  },
+  "nuthatch_knock": {
+    "files": [
+      "forest-nuthatch_knock-v01.mp3",
+      "forest-nuthatch_knock-v02.mp3",
+      "forest-nuthatch_knock-v03.mp3",
+      "forest-nuthatch_knock-v04.mp3"
+    ],
+    "duration_s": 4
+  },
+  "pheasant_call": {
+    "files": [
+      "forest-pheasant_call-v01.mp3",
+      "forest-pheasant_call-v02.mp3",
+      "forest-pheasant_call-v03.mp3",
+      "forest-pheasant_call-v04.mp3"
+    ],
+    "duration_s": 4
+  },
+  "treecreeper": {
+    "files": [
+      "forest-treecreeper-v01.mp3",
+      "forest-treecreeper-v02.mp3",
+      "forest-treecreeper-v03.mp3",
+      "forest-treecreeper-v04.mp3"
+    ],
+    "duration_s": 5
+  },
+  "wren_burst": {
+    "files": [
+      "forest-wren_burst-v01.mp3",
+      "forest-wren_burst-v02.mp3",
+      "forest-wren_burst-v03.mp3",
+      "forest-wren_burst-v04.mp3"
+    ],
+    "duration_s": 4
+  },
+  "robin_song": {
+    "files": [
+      "forest-robin_song-v01.mp3",
+      "forest-robin_song-v02.mp3",
+      "forest-robin_song-v03.mp3",
+      "forest-robin_song-v04.mp3"
+    ],
+    "duration_s": 7
+  },
+  "wood_pigeon": {
+    "files": [
+      "forest-wood_pigeon-v01.mp3",
+      "forest-wood_pigeon-v02.mp3",
+      "forest-wood_pigeon-v03.mp3",
+      "forest-wood_pigeon-v04.mp3"
+    ],
+    "duration_s": 6
+  },
+  "cuckoo": {
+    "files": [
+      "forest-cuckoo-v01.mp3",
+      "forest-cuckoo-v02.mp3",
+      "forest-cuckoo-v03.mp3",
+      "forest-cuckoo-v04.mp3"
+    ],
+    "duration_s": 6
+  },
+  "sparrowhawk_alarm": {
+    "files": [
+      "forest-sparrowhawk_alarm-v01.mp3",
+      "forest-sparrowhawk_alarm-v02.mp3",
+      "forest-sparrowhawk_alarm-v03.mp3",
+      "forest-sparrowhawk_alarm-v04.mp3"
+    ],
+    "duration_s": 5
+  },
+  "badger_night": {
+    "files": [
+      "forest-badger_night-v01.mp3",
+      "forest-badger_night-v02.mp3",
+      "forest-badger_night-v03.mp3",
+      "forest-badger_night-v04.mp3"
+    ],
+    "duration_s": 7
+  },
+  "rabbit_warning": {
+    "files": [
+      "forest-rabbit_warning-v01.mp3",
+      "forest-rabbit_warning-v02.mp3",
+      "forest-rabbit_warning-v03.mp3",
+      "forest-rabbit_warning-v04.mp3"
+    ],
+    "duration_s": 3
+  },
+  "acorn_fall": {
+    "files": [
+      "forest-acorn_fall-v01.mp3",
+      "forest-acorn_fall-v02.mp3",
+      "forest-acorn_fall-v03.mp3",
+      "forest-acorn_fall-v04.mp3"
+    ],
+    "duration_s": 3
+  },
+  "old_tree_creak": {
+    "files": [
+      "forest-old_tree_creak-v01.mp3",
+      "forest-old_tree_creak-v02.mp3",
+      "forest-old_tree_creak-v03.mp3",
+      "forest-old_tree_creak-v04.mp3"
+    ],
+    "duration_s": 6
+  },
+  "walker_path": {
+    "files": [
+      "forest-walker_path-v01.mp3",
+      "forest-walker_path-v02.mp3",
+      "forest-walker_path-v03.mp3",
+      "forest-walker_path-v04.mp3"
+    ],
+    "duration_s": 7
+  },
+  "chainsaw_far": {
+    "files": [
+      "forest-chainsaw_far-v01.mp3",
+      "forest-chainsaw_far-v02.mp3",
+      "forest-chainsaw_far-v03.mp3",
+      "forest-chainsaw_far-v04.mp3"
+    ],
+    "duration_s": 7
+  }
+}
