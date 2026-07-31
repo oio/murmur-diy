@@ -1,16 +1,18 @@
-# A murmur's guide to the galaxy
+# A mur mur's guide to the galaxy
 
 ![mur mur](docs/hero.jpg)
 
-[murmur.living](https://www.murmur.living/), a speaker with a world inside.
+[Mur mur](https://www.murmur.living/) • a small speaker with a world inside. Not a playlist or a stream, but a living soundscape you can listen to or peek into.
 
-Mur mur is an experiment by [oio.studio](https://oio.studio) and [Mattering](https://matteringstudio.com): a small speaker that holds a tiny world, a place with its own weather, rhythms, and society, and plays the ambient sound that world makes. Not a playlist or a stream, but a living soundscape you can sit with, or peek into.
+An experiment by [oio](https://oio.studio) and [Mattering](https://matteringstudio.com).
 
-This guide helps you build the open source hardware prototype of Mur mur using readily available off-the-shelf parts. It comes loaded with pre-generated soundscapes for you to enjoy. You can build it with the full feature set (display, battery, charging, audio, and volume control) or skip some features for a display-only object.
+## The DIY version
 
-Questions while building? Join the oio Discord and ask there:
+This guide helps you build the open source hardware prototype of mur mur using readily available off-the-shelf parts. It comes loaded with pre-generated soundscapes for you to enjoy. You can build it with the full feature set (display, battery, charging, audio, and volume control) or skip some features for a display-only object.
 
-[![Join Discord](https://img.shields.io/badge/Discord-Join%20the%20OIO%20server-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/unRp8D7RC)
+Questions while building? Join the oio Discord below:
+
+[![Join Discord](https://img.shields.io/badge/Discord-Join%20the%20OIO%20server-5865F2?style=flat-square&logo=discord&logoColor=white)](https://oio.studio/discord)
 
 #### Steps of this guide:
 
@@ -24,12 +26,11 @@ Questions while building? Join the oio Discord and ask there:
 
 ## ❶ Order and print parts
 
-First we need to order a bunch of stuff. The complete Bill of materials is right below. The diagram shows you where things go. Filaments are sorted by the type of murmur and print files need to be printed with the different filaments.
+First we need to order a bunch of stuff. The complete bill of materials is right below. The diagram shows you where things go. Filaments are sorted by the type of mur mur and print files need to be printed with the different filaments.
 
 ![BOM diagram](docs/diagram_1.jpg)
 
 #### BOM
-
 
 | ID  | Name                                                 | Link                                                                  |
 | --- | ---------------------------------------------------- | --------------------------------------------------------------------- |
@@ -44,11 +45,9 @@ First we need to order a bunch of stuff. The complete Bill of materials is right
 | M9  | M2 screws                                            | Any flat head M2                                                      |
 | M10 | Micro SD                                             | Any MicroSD card                                                      |
 
-
 > **Note:** Most shopping links point to Amazon Netherlands for convenience. The same parts (or close equivalents) are widely available across Europe and the US, use the product names and specs here as a search reference, then order from a local seller if that’s easier.
 
 #### Filament
-
 
 | Color     | Block                                                    | Plot                                                                                   | Pond                                                                             |
 | --------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -56,11 +55,9 @@ First we need to order a bunch of stuff. The complete Bill of materials is right
 | Secondary | [Link](https://www.3djake.nl/esun/pla-matte-tangerine)   | [Link](https://www.3djake.nl/polymaker/polyterra-pla-dual-camouflage-dark-green-brown) | [Link](https://www.3djake.nl/formfutura/tough-pla-dark-blue?sai=9932)            |
 | Tertiary  | [Linka]()                                                | [Linkb]()                                                                              | [Linkc]()                                                                        |
 
-
 #### 3D print files
 
-Print the four parts below before you assemble. Match filament to your murmur type (Block, Plot, or Pond) from the table above, primary for the shells, secondary for the dial and mount.
-
+Print the four parts below before you assemble. Match filament to your mur mur type (Block, Plot, or Pond) from the table above, primary for the shells, secondary for the dial and mount.
 
 | ID  | Name         | Color     | Link                                                      |
 | --- | ------------ | --------- | --------------------------------------------------------- |
@@ -68,7 +65,6 @@ Print the four parts below before you assemble. Match filament to your murmur ty
 | P2  | Bottom shell | Primary   | [murmur_buttom_shell.stl](prints/murmur_buttom_shell.stl) |
 | P3  | Dial         | Secondary | [murmur_dial.stl](prints/murmur_dial.stl)                 |
 | P4  | Mount        | Secondary | [murmur_mount.stl](prints/murmur_mount.stl)               |
-
 
 Use supports on the shells (especially overhangs around the openings), and print one part at a time for cleaner surfaces. The mount (P4) holds the display and speaker; the dial (P3) presses onto the encoder shaft after the top shell is screwed on. Once the parts are printed and the electronics ordered, flash the firmware, then come back here for wiring and assembly.
 
@@ -140,18 +136,15 @@ Power the wired stack and confirm video and audio before you close anything up. 
 
 Make sure a microSD card with `video.avi` on the root is inserted, then power on with the board’s **PWR** button. The video loops on the round display with sound through the speaker or headphone jack.
 
-
-| Control | Action |
-| --- | --- |
-| Turn the dial | Volume up / down (shown briefly on screen) |
-| Hold the dial ~1 s | **Pause / Standby** — screen off, audio muted. Battery will drain in a few hours because the processor stays awake waiting for your next click. |
-| Click the dial | Wake from standby and resume playback |
+| Control              | Action                                                                                                                                                                                                         |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Turn the dial        | Volume up / down (shown briefly on screen)                                                                                                                                                                     |
+| Hold the dial ~1 s   | **Pause / Standby** — screen off, audio muted. Battery will drain in a few hours because the processor stays awake waiting for your next click.                                                                |
+| Click the dial       | Wake from standby and resume playback                                                                                                                                                                          |
 | Board **PWR** button | **True Power Off** — physically cuts battery power. Use this when turning the device off for the day. (Note: Because power is cut, you cannot use the dial to turn it back on; you must press the PWR button). |
-
-
 
 ---
 
-Stuck on wiring, flashing, or assembly? Hop into the [oio Discord](https://discord.gg/unRp8D7RC) and ask, happy to help.
+Stuck on wiring, flashing, or assembly? Hop into the [oio Discord](https://oio.studio/discord) and ask, we are happy to help.
 
-[![Join Discord](https://img.shields.io/badge/Discord-Join%20the%20OIO%20server-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/unRp8D7RC)
+[![Join Discord](https://img.shields.io/badge/Discord-Join%20the%20OIO%20server-5865F2?style=flat-square&logo=discord&logoColor=white)](https://oio.studio/discord)
