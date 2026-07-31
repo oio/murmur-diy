@@ -10,7 +10,7 @@ This guide helps you build the open source hardware prototype of Mur mur using r
 
 Questions while building? Join the oio Discord and ask there:
 
-[Join the oio Discord](https://discord.gg/unRp8D7RC)
+[![Join Discord](https://img.shields.io/badge/Discord-Join%20the%20OIO%20server-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/unRp8D7RC)
 
 #### Steps of this guide:
 
@@ -33,10 +33,10 @@ First we need to order a bunch of stuff. The complete Bill of materials is right
 
 | ID  | Name                                                 | Link                                                                  |
 | --- | ---------------------------------------------------- | --------------------------------------------------------------------- |
-| M1  | Lens                                                 | [Amazon](https://www.amazon.nl/dp/B0G3PH9RPP)                         |
+| M1  | Lens 16mm (20mm FL)                                  | [Amazon](https://www.amazon.nl/dp/B0G3PH9RPP)                         |
 | M2  | Display Module (ESP32-S3-Touch-AMOLED-1.75, 466×466) | [Waveshare](https://www.waveshare.com/esp32-s3-touch-amoled-1.75.htm) |
 | M3  | Rotary encoder (EC11)                                | [Amazon](https://www.amazon.nl/dp/B07RK386GS)                         |
-| M4  | Speaker                                              | [Amazon](https://www.amazon.nl/dp/B0DB1WM4QR)                         |
+| M4  | Speaker 3 watt 4 ohm / 2 watt 8 ohm                  | [Amazon](https://www.amazon.nl/dp/B0DB1WM4QR)                         |
 | M5  | DAC (PCM5102A)                                       | [Amazon](https://www.amazon.nl/dp/B0F7LL4S8Z)                         |
 | M6  | Headphone jack (3.5 mm extension)                    | [Amazon](https://www.amazon.nl/dp/B0GHQFPSLJ)                         |
 | M7  | Battery                                              | [Amazon](https://www.amazon.nl/dp/B0F88S2V1Y)                         |
@@ -154,4 +154,4 @@ Make sure a microSD card with `video.avi` on the root is inserted, then power on
 
 Stuck on wiring, flashing, or assembly? Hop into the [oio Discord](https://discord.gg/unRp8D7RC) and ask, happy to help.
 
-[Join the oio Discord](https://discord.gg/unRp8D7RC)
+[![Join Discord](https://img.shields.io/badge/Discord-Join%20the%20OIO%20server-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/unRp8D7RC)
