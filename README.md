@@ -2,7 +2,8 @@
 
 ![mur mur](docs/hero.jpg)
 
-[Mur mur](https://www.murmur.living/) • a small speaker with a world inside. Not a playlist or a stream, but a living soundscape you can listen to or peek into.
+[mur mur](https://www.murmur.living/) is a small speaker with a world inside.
+Not a playlist or a stream, but a living soundscape you can listen to or peek into.
 
 An experiment by [oio](https://oio.studio) and [Mattering](https://matteringstudio.com).
 
