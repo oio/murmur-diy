@@ -44,18 +44,19 @@ First we need to order a bunch of stuff. The complete bill of materials is right
 | M7  | Battery charger (TP4057 USB-C)                       | [Amazon](https://www.amazon.nl/dp/B0F59VQ8JC)                         |
 | M8  | Battery                                              | [Amazon](https://www.amazon.nl/dp/B0F88S2V1Y)                         |
 | M9  | M2 screws                                            | Any 4-6mm M2 bolt                                                     |
-| M10 | Micro SD                                             | Any MicroSD card (at least 2GB)                                       |
+| M10 | Micro SD                                             | Any MicroSD card (at least 3GB)                                       |
 | M11 | Male Pin Header (2.54mm)                             | Any 2.54mm male header                                                |
 
 > **Note:** Most shopping links point to Amazon Netherlands. The same parts (or close equivalents) are widely available across Europe and the US, use the product names and specs here as a search reference, then order from a local seller if that’s easier.
 
 #### Filament
 
+> **Note:** The filaments listed below are just examples of the exact ones we used for our prototypes. Feel free to use any 3D printing filament (PLA, PETG, etc.) and color combination you like!
+
 | Color     | Block                                                    | Plot                                                                                   | Pond                                                                             |
 | --------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | Primary   | [Link](https://www.3djake.nl/esun/pla-matte-light-khaki) | [Link](https://www.3djake.nl/esun/pla-matte-matcha-green)                              | [Link](https://www.3djake.nl/polymaker/polyterra-pla-dual-glacier-blue-ice-blue) |
 | Secondary | [Link](https://www.3djake.nl/esun/pla-matte-tangerine)   | [Link](https://www.3djake.nl/polymaker/polyterra-pla-dual-camouflage-dark-green-brown) | [Link](https://www.3djake.nl/formfutura/tough-pla-dark-blue?sai=9932)            |
-| Tertiary  | [Link]()                                                 | [Link]()                                                                               | [Link]()                                                                         |
 
 #### 3D print files
 
@@ -145,6 +146,7 @@ Make sure a microSD card with your generated media files (e.g., `city.avi`, `for
 
 | Control       | Action                                                                                                                                                                                         |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Volume        | **Turn** the potentiometer / 3D-printed dial.                                                                                                                                                  |
 | Shake         | **Switch Theme** — changes the current theme (e.g. from city to forest to water).                                                                                                              |
 | Turn On / Off | **Option 1:** Plug in the charging cable at the bottom.<br>**Option 2:** Insert a needle or wire in the top right 2nd hole.<br>**Option 3:** Unscrew the top shell and click the button manually.|
 
