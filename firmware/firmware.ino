@@ -19,7 +19,6 @@
 #include "PWR_Key.h"
 #include "BAT_Driver.h"
 #include "AVI_Player.h"
-#include "EC11_Volume.h"
 #include "IMU_Shake.h"
 #include "Theme_Manager.h"
 
@@ -27,7 +26,6 @@ static void DriverTask(void *) {
   while (true) {
     PWR_Loop();
     BAT_Get_Volts();
-    EC11_Loop();
     if (IMU_CheckShake()) {
       Theme_Shake();
     }
@@ -38,7 +36,7 @@ static void DriverTask(void *) {
 void setup() {
   // Use USB CDC for serial, avoid mapping hardware UART to GPIO 1/3 (SD card pins)
   Serial.begin(115200);
-  Serial.setTxTimeoutMs(0);
+  // Serial.setTxTimeoutMs(0);
   delay(200);
   printf("\n=== VideoPlayer boot (466 AMOLED) ===\n");
 
@@ -52,8 +50,9 @@ void setup() {
   Backlight_Init();
   Set_Backlight(80);
 
-  EC11_Init(70);  // start at 70% volume
-  LCD_DrawVolumeOverlay(EC11_GetVolume());
+  // Set RXD (GPIO 44) high to output 3.3V
+  pinMode(44, OUTPUT);
+  digitalWrite(44, HIGH);
 
   SD_Init();
   AVI_Player_Init();

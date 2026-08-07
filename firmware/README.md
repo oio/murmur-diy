@@ -54,6 +54,7 @@ ffmpeg -i YOUR_INPUT.mp4 \
   -vf "scale=466:466:force_original_aspect_ratio=decrease,pad=466:466:(ow-iw)/2:(oh-ih)/2,setsar=1" \
   -r 15 \
   -vcodec mjpeg -q:v 8 \
+  -af "highpass=f=150,alimiter=limit=-3dB" \
   -acodec pcm_s16le -ar 22050 -ac 1 \
   video.avi
 ```

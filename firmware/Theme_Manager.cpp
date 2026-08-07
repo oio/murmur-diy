@@ -29,9 +29,9 @@ void Theme_Init() {
 
 const char* Theme_GetNextVideo() {
     char files[50][100];
-    const char* prefix = "city_";
-    if (s_currentTheme == THEME_FORREST) prefix = "forrest_";
-    if (s_currentTheme == THEME_WATER) prefix = "water_";
+    const char* prefix = "city";
+    if (s_currentTheme == THEME_FORREST) prefix = "forrest";
+    if (s_currentTheme == THEME_WATER) prefix = "water";
     
     printf("Scanning SD card for theme: %s\n", prefix);
     uint16_t count = Folder_retrieval("/", prefix, files, 50);

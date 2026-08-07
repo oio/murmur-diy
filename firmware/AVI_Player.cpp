@@ -7,7 +7,7 @@
  *
  * Expected AVI format (create with the ffmpeg command in README.md):
  *   - Video: MJPEG, 466×466, 15 fps, Q≈6–9
- *   - Audio: PCM signed 16-bit, 22050 Hz, mono or stereo
+ *   - Audio: PCM signed 16-bit, 22050 Hz, mono or stereo (Highpass at 150Hz recommended)
  *
  * Libraries required (install via Arduino Library Manager):
  *   - JPEGDEC  by Larry Bank
@@ -20,7 +20,6 @@
 #include "Display_CO5300.h"
 #include "SD_Card.h"
 #include <SD.h>
-#include "EC11_Volume.h"
 #include "Theme_Manager.h"
 
 // External PCM5102A on header pins (SCK left unconnected — DAC PLL from BCK/LRCK)
@@ -149,9 +148,7 @@ static void displayTask(void *pvParameters) {
     xSemaphoreTake(s_display_sem, portMAX_DELAY);
     uint16_t *frame = s_frame_buf[s_front_buf_idx];
     // Composite HUD into the same frame before the QSPI push → no flicker
-    if (EC11_OverlayActive()) {
-      LCD_BlitVolumeOverlay(frame, EC11_GetVolume());
-    }
+    // (Volume overlay removed)
     LCD_addWindow(0, 0, EXAMPLE_LCD_WIDTH - 1, EXAMPLE_LCD_HEIGHT - 1, frame);
     xSemaphoreGive(s_display_done_sem);
   }
@@ -198,9 +195,9 @@ static bool i2s_setup(uint32_t rate, uint8_t channels, uint8_t bits) {
   i2s_chan_config_t chan_cfg = I2S_CHANNEL_DEFAULT_CONFIG(I2S_NUM_AUTO, I2S_ROLE_MASTER);
   
   // Dramatically increase I2S DMA buffer size to prevent choppy audio!
-  // The default buffer only holds ~65ms of audio, which stutters instantly if 
-  // JPEG decoding lags. We increase this to 10 descriptors * 1023 frames = ~0.5s of audio.
-  chan_cfg.dma_desc_num = 10;
+  // We increase this to 16 descriptors * 1023 frames to give plenty of buffer
+  // so the ESP32 doesn't starve the audio when decoding heavy video frames.
+  chan_cfg.dma_desc_num = 16;
   chan_cfg.dma_frame_num = 1023;
   chan_cfg.auto_clear = true;
 
@@ -258,24 +255,22 @@ static bool s_audio_starving = false;
 static void audio_write(const uint8_t *data, size_t len) {
   if (!s_i2s_ok || !s_i2s_tx || len == 0) return;
 
-  const float gain = EC11_GetGain();
   uint32_t t_start = millis();
   size_t written = 0;
   
+  // The PCM5102A outputs 2.1Vrms (6V peak-to-peak), which massively overdrives 
+  // the input of typical 3W/5V amplifiers and causes extreme clipping on bass.
+  // We attenuate digitally by dividing by 4 (-12dB) since the user has a 3.7V battery.
   if (s_audio_ch == 1) {
-    // Duplicate mono samples to L and R channels AND boost volume
+    // Duplicate mono samples to L and R channels natively (no float math)
     if (!s_stereo_buf) return;
     const int16_t *src = (const int16_t*)data;
     int16_t       *dst = (int16_t*)s_stereo_buf;
     size_t samples = len / 2;
     for (size_t i = 0; i < samples; i++) {
-      int32_t sample = (int32_t)(src[i] * gain);
-      // Hard clip to prevent integer overflow distortion
-      if (sample > 32767) sample = 32767;
-      if (sample < -32768) sample = -32768;
-      
-      dst[i * 2    ] = (int16_t)sample;
-      dst[i * 2 + 1] = (int16_t)sample;
+      int16_t sample = src[i] / 4;
+      dst[i * 2    ] = sample;
+      dst[i * 2 + 1] = sample;
     }
     
     // Write in small chunks so I2S DMA can ingest it smoothly
@@ -288,18 +283,13 @@ static void audio_write(const uint8_t *data, size_t len) {
         to_write -= chunk;
     }
   } else {
-    // Stereo audio: copy to stereo buffer to apply volume boost
+    // Stereo audio: scale down to prevent overdrive
     if (!s_stereo_buf) return;
     const int16_t *src = (const int16_t*)data;
     int16_t       *dst = (int16_t*)s_stereo_buf;
     size_t samples = len / 2;
     for (size_t i = 0; i < samples; i++) {
-      int32_t sample = (int32_t)(src[i] * gain);
-      // Hard clip to prevent integer overflow distortion
-      if (sample > 32767) sample = 32767;
-      if (sample < -32768) sample = -32768;
-      
-      dst[i] = (int16_t)sample;
+      dst[i] = src[i] / 4;
     }
     
     // Write in small chunks so I2S DMA can ingest it smoothly
@@ -546,10 +536,7 @@ void AVI_Player_Play(const char* filename) {
       bool is_video = (fcc == CC_00dc || fcc == CC_01dc);
       bool is_audio = (fcc == CC_01wb || fcc == CC_00wb);
 
-      // Standby (dial held 1s): freeze until click wakes (3s input lockout first)
-      while (EC11_IsStandby()) {
-        vTaskDelay(pdMS_TO_TICKS(50));
-      }
+      // (Standby via rotary encoder removed)
 
       // Check if theme was shaken to change
       if (Theme_HasChanged()) {
