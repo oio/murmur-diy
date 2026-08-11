@@ -44,7 +44,7 @@ First we need to order a bunch of stuff. The complete bill of materials is right
 | M7  | Battery charger (TP4057 USB-C)                       | [Amazon](https://www.amazon.nl/dp/B0F59VQ8JC)                         |
 | M8  | Battery                                              | [Amazon](https://www.amazon.nl/dp/B0F88S2V1Y)                         |
 | M9  | M2 screws                                            | Any 4-6mm M2 bolt                                                     |
-| M10 | Micro SD                                             | Any MicroSD card (at least 3GB)                                       |
+| M10 | Micro SD                                             | Any MicroSD card (at least 4GB)                                       |
 | M11 | Male Pin Header (2.54mm)                             | Any 2.54mm male header                                                |
 
 > **Note:** Most shopping links point to Amazon Netherlands. The same parts (or close equivalents) are widely available across Europe and the US, use the product names and specs here as a search reference, then order from a local seller if that’s easier.
