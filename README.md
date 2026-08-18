@@ -152,6 +152,12 @@ Make sure a microSD card with your generated media files (e.g., `city.avi`, `for
 
 ---
 
+## License
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) License](LICENSE).
+
+---
+
 Stuck on wiring, flashing, or assembly? Hop into the [oio Discord](https://oio.studio/discord) and ask, we are happy to help.
 
 [![Join Discord](https://img.shields.io/badge/Discord-Join%20the%20OIO%20server-5865F2?style=flat-square&logo=discord&logoColor=white)](https://oio.studio/discord)
