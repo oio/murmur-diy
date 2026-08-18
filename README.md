@@ -9,7 +9,7 @@ An experiment by [oio](https://oio.studio) and [Mattering](https://matteringstud
 
 ## The DIY version
 
-This guide helps you build the open source hardware prototype of mur mur using readily available off-the-shelf parts. It comes loaded with pre-generated soundscapes for you to enjoy. You can build it with the full feature set (display, battery, charging, and audio) or skip some features for a display-only object.
+This guide helps you build the open source hardware prototype of mur mur using readily available off-the-shelf parts. It comes loaded with pre-generated soundscapes for you to enjoy. You can build it with the full feature set (display, battery, charging, and audio) or skip some features for a display-only object. 
 
 Questions while building? Join the oio Discord below:
 
@@ -149,6 +149,12 @@ Make sure a microSD card with your generated media files (e.g., `city.avi`, `for
 | Volume        | **Turn** the potentiometer / 3D-printed dial.                                                                                                                                                  |
 | Shake         | **Switch Theme** — changes the current theme (e.g. from city to forest to water).                                                                                                              |
 | Turn On / Off | **Option 1:** Plug in the charging cable at the bottom.<br>**Option 2:** Insert a needle or wire in the top right 2nd hole.<br>**Option 3:** Unscrew the top shell and click the button manually.|
+
+---
+
+## License
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) License](LICENSE).
 
 ---
 
