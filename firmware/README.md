@@ -24,6 +24,12 @@ arduino-cli lib install "GFX Library for Arduino"
 
 If the port is not detected, hold **BOOT**, plug in USB, release **BOOT**, then run again.
 
+If several serial ports show up (common on Windows), set the port for one flash:
+
+```bash
+PORT=COM3 ./flash.sh
+```
+
 Press **RESET** after upload. Insert the SD card (`video.avi` on the root) and connect the speaker.
 
 ---

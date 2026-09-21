@@ -110,7 +110,13 @@ First step is to wire up all the components. Follow the schematic diagram to sol
 
 ![Schematic](docs/diagram_3.jpg)
 
-The diagram above is the pin-level wiring map. From the ESP32 header: **GPIO18 → BCK**, **GPIO17 → DIN**, **GPIO16 → LCK** on the PCM5102A, with **3V3 → VIN** and **GND → GND** (also tie the **SCK** to GND). Power runs through the TP4057 to the battery and into the board’s BAT connector.
+The diagram above is the pin-level wiring map.
+
+**ESP32-S3 → PCM5102A (I2S):** **GPIO18 → BCK**, **GPIO17 → DIN**, **GPIO16 → LCK**, **3V3 → VIN**, **GND → GND**. Also tie DAC **SCK to GND**.
+
+**PCM5102A → PAM8403 (analog):** **G → G** and **L → L**. Do not swap those two.
+
+**Power:** run **both** PAM8403 **Power +** and **Power −** from the TP4057 (**OUT+** / **OUT−**). Do not take amp power from the ESP 3V3 rail, and do not use the DAC analog ground as the amp’s power ground. The TP4057 also feeds the battery (**B+** / **B−**) and the board’s **BAT +** / **BAT −** connector.
 
 Power the wired stack and confirm video and audio before you close anything up. When that works, put the parts together in the shell.
 
@@ -119,7 +125,7 @@ Power the wired stack and confirm video and audio before you close anything up. 
 ![Assembly Step 1](docs/assembly_1.jpg)
 
 1. Add an 8-pin male header to the ESP pinout. Then solder some female jumper cables to GPIO18, 17, 16, 3V3, and GND and connect them to the PCM5102A. Make sure to wire the SCK to GND. See photo as an example.
-2. Wire up the audio output from the PCM5102A to the audio input on the PAM8403 and connect power. Important: the (+) positive wire needs to come directly from the battery or TP4057.
+2. Wire up the audio output from the PCM5102A to the audio input on the PAM8403: **G to G**, **L to L**. Connect PAM8403 **Power +** and **Power −** directly to the TP4057 **OUT+** and **OUT−**.
 3. Insert and fasten the PAM8403 to the 3D-printed mounting plate.
 
 ![Assembly Step 2](docs/assembly_2.jpg)
