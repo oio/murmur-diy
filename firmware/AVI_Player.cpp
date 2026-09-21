@@ -538,10 +538,11 @@ void AVI_Player_Play(const char* filename) {
 
       // (Standby via rotary encoder removed)
 
-      // Check if theme was shaken to change
+      // Check if theme was shaken to change (must exit AVI_Player_Play — outer loop would restart same file)
       if (Theme_HasChanged()) {
-          printf("AVI: Theme change detected! Stopping playback.\n");
-          break;
+        printf("AVI: Theme change detected! Stopping playback.\n");
+        f.close();
+        return;
       }
 
       // ── VIDEO frame ────────────────────────────────────────────────────────

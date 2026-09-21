@@ -28,18 +28,25 @@ void IMU_Init() {
                         imu_ok = true;
                         s_imu_addr = addrs[i];
                         printf("QMI8658 IMU found at 0x%02X!\n", s_imu_addr);
-                        
-                        // Enable Accelerometer (CTRL7 = 0x01)
+
+                        // Auto-increment address for burst reads (required for 6-byte accel read)
                         Wire.beginTransmission(s_imu_addr);
-                        Wire.write(QMI8658_CTRL7);
-                        Wire.write(0x01); // Enable accel only
+                        Wire.write(QMI8658_CTRL1);
+                        Wire.write(0x60);
                         Wire.endTransmission();
-                        
+
                         // Config Accel (CTRL2 = 0x24) -> 250Hz, +/- 2g
                         Wire.beginTransmission(s_imu_addr);
                         Wire.write(QMI8658_CTRL2);
                         Wire.write(0x24);
                         Wire.endTransmission();
+
+                        // Enable Accelerometer (CTRL7 = 0x01)
+                        Wire.beginTransmission(s_imu_addr);
+                        Wire.write(QMI8658_CTRL7);
+                        Wire.write(0x01);
+                        Wire.endTransmission();
+                        delay(50);
                         return;
                     }
                 }
@@ -72,8 +79,8 @@ bool IMU_CheckShake() {
         float mag = (gx*gx) + (gy*gy) + (gz*gz);
         
         // Rest is approx 1.0 (Earth's gravity)
-        // A shake would spike above 1.0. Let's trigger on > 1.8 (i.e. > 1.34g total) to make it easier to trigger
-        if (mag > 1.8f) {
+        // At rest magnitude ≈ 1g; a firm shake pushes total acceleration higher.
+        if (mag > 1.5f) {
             uint32_t now = millis();
             if (now - last_shake_time > 2000) { // 2 second cooldown
                 last_shake_time = now;
